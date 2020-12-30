@@ -1,0 +1,12 @@
+.main-footer {
+  &__copyright {
+    @extend .animate__animated;
+    @extend .animate__bounceInDown;
+
+    position: fixed;
+    bottom: 15px;
+    text-align: center;
+    width: 100%;
+    color: $color-blue;
+  }
+}

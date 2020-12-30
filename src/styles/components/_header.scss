@@ -1,0 +1,14 @@
+.main-header {
+  .content {
+    padding-top: 15px;
+
+    &__title {
+      @extend .animate__animated;
+      @extend .animate__bounceInUp;
+
+      font-size: 30px;
+      text-align: center;
+      position: relative;
+    }
+  }
+}
