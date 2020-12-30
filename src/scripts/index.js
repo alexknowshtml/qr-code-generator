@@ -1,12 +1,13 @@
 import QRCode from 'qrcode';
+import image from '../assets/images/placeholder-image.jpg';
 
 window.addEventListener('DOMContentLoaded', () => {
   const year = document.querySelector('.main-footer__copyright').innerHTML.replace('$year', `${new Date().getFullYear()}`);
 
   document.querySelector('.main-footer__copyright').innerHTML = year;
+  const textInput = document.getElementById('yourtext');
 
-  document.querySelector('.btn-create').addEventListener('click', () => {
-    const textInput = document.getElementById('yourtext');
+  textInput.addEventListener('keyup', () => {
     const opts = {
       errorCorrectionLevel: 'H',
       type: 'image/jpeg',
@@ -23,6 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
         if (err) throw err;
         document.getElementById('qr-code-display').src = url;
       });
+    } else {
+      document.getElementById('qr-code-display').src = image;
     }
   });
 });
