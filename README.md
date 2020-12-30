@@ -4,7 +4,7 @@ Create an app about HTML/CSS/JS with Parcel (Web application bundle)
 
 Author: Cu Nguyen &lt;[cunguyen.dev@gmail.com](cnguyen.dev@gmail.com)&gt;
 
-Deploy to Netlify: [https://qrcode-generator.netlify.app/](https://qrcode-generator.netlify.app/)
+Deploy to Netlify: [https://qrcode-generate.netlify.app/](https://qrcode-generate.netlify.app/)
 
 ## Requirements
 
