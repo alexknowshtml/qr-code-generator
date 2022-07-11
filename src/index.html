@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QR Code Generator</title>
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./styles/main.scss" />
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="main-header">
-      <div class="main-header__content content">
-        <a href="https://github.com/cunguyendev" target="_blank">
-          <h1 data-description="@cunguyendev"" class="content__title">QR Code Generator</h1>
-        </a>
-      </div>
-    </header>
 
-    <!-- App -->
-    <div class="app">
-      <div class="app__content">
-        <input placeholder="Enter your text" type="text" id="yourtext" name="yourtext">
-        <div class="qr-code-display">
-          <img id="qr-code-display" src="./assets/images/placeholder-image.jpg" alt="QR Code Generator">
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Code Generator</title>
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./styles/main.scss" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="main-header__content content">
+      <a href="https://github.com/cunguyendev" target="_blank">
+        <h1 data-description="@cunguyendev"" class=" content__title">QR Code Generator</h1>
+      </a>
     </div>
+  </header>
+  <!-- App -->
+  <div class="app">
+    <div class="app__content">
+      <input placeholder="Enter the URL of the site you want to redirect to" type="text" id="yourtext" name="yourtext">
+      <div class="qr-code-display">
+        <img id="qr-code-display" src="./assets/images/placeholder-image.jpg" alt="QR Code Generator">
+      </div>
+      <p><strong>Right click and save this image after you've tested it to make sure it works!</strong></p>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p class="main-footer__copyright">Copyright © $year
+      <a target="_blank" href="https://github.com/cunguyendev/parcel-base-app">Parcel base app</a>
+    </p>
+  </footer>
+</body>
+<script src="./scripts/index.js"></script>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-      <p class="main-footer__copyright">Copyright © $year
-        <a target="_blank" href="https://github.com/cunguyendev/parcel-base-app">Parcel base app</a>
-      </p>
-    </footer>
-  </body>
-
-  <script src="./scripts/index.js"></script>
 </html>
