@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
       quality: 1,
       margin: 1,
       color: {
-        dark: '#0170fe',
+        dark: '#000',
         light: '#fff',
       },
     };
