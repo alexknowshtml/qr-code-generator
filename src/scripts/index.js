@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
         dark: '#000',
         light: '#fff',
       },
+      width: 1000
     };
 
     if (textInput.value) {
