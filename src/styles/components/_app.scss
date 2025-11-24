@@ -6,16 +6,41 @@
     margin: 0 auto;
     text-align: right;
 
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
     input {
       color: $color-black;
       border-radius: 2px;
       border: 1px solid $color-black;
       padding: 10px;
+      padding-right: 40px;
       width: 100%;
       box-sizing: border-box;
 
       &::placeholder {
         color: $color-black;
+      }
+    }
+
+    .clear-btn {
+      position: absolute;
+      right: 5px;
+      background: transparent;
+      border: none;
+      color: $color-black;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 5px 10px;
+      margin: 0;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 1;
       }
     }
 

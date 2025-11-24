@@ -6,35 +6,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QR Code Generator</title>
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="./styles/main.scss" />
+  <script>
+    // Suppress Tailwind CDN production warning
+    window.process = { env: { NODE_ENV: 'production' } };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-gradient-to-br from-amber-50 via-white to-yellow-50 min-h-screen">
   <!-- Header -->
-  <header class="main-header">
-    <div class="main-header__content content">
-      <a href="https://github.com/cunguyendev" target="_blank">
-        <h1 data-description="@cunguyendev"" class=" content__title">QR Code Generator</h1>
-      </a>
+  <header class="py-12 px-4 bg-amber-400">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-3">
+        QR Code Generator
+      </h1>
+      <p class="text-gray-900 text-lg md:text-xl font-medium">Create shareable QR codes instantly</p>
     </div>
   </header>
+
   <!-- App -->
-  <div class="app">
-    <div class="app__content">
-      <input placeholder="Enter the URL of the site you want to redirect to" type="text" id="yourtext" name="yourtext">
-      <div class="qr-code-display">
-        <img id="qr-code-display" src="./assets/images/placeholder-image.jpg" alt="QR Code Generator">
+  <main class="px-4 pb-16 pt-12">
+    <div class="max-w-2xl mx-auto">
+      <!-- Input Section -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+        <label for="yourtext" class="block text-sm font-medium text-gray-700 mb-3">Enter your URL</label>
+        <div class="relative">
+          <input
+            placeholder="https://example.com"
+            type="text"
+            id="yourtext"
+            name="yourtext"
+            value="https://"
+            class="w-full px-4 py-3 pr-12 text-lg border-2 border-gray-200 rounded-lg focus:border-emerald-500 focus:outline-none transition-colors"
+          >
+          <button
+            id="clear-btn"
+            class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 text-2xl w-8 h-8 flex items-center justify-center transition-colors"
+            title="Clear URL"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- QR Code Display -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+        <div class="mb-6">
+          <img id="qr-code-display" src="./assets/images/placeholder-image.jpg" alt="QR Code" class="max-w-full w-80 mx-auto rounded-lg">
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex gap-4 justify-center mb-4 flex-wrap">
+          <button id="copy-btn" class="flex items-center gap-2 px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-bold text-lg rounded-full transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            <span id="copy-icon">📋</span>
+            <span id="copy-text">Copy Image</span>
+          </button>
+          <button id="download-btn" class="flex items-center gap-2 px-8 py-4 bg-amber-400 hover:bg-amber-500 text-gray-900 font-bold text-lg rounded-full transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            <span>⬇️</span>
+            <span>Download</span>
+          </button>
+        </div>
+
+        <p class="text-sm text-gray-600">
+          Test your QR code before sharing to make sure it works
+        </p>
       </div>
     </div>
-    <p style="margin-top:10px; text-align: center;"><strong>Right click and save this image after you've tested it to make sure it works!</strong></p>
-  </div>
+  </main>
+
   <!-- Footer -->
-  <footer class="main-footer">
-    <p class="main-footer__copyright">Copyright © $year
-      <a target="_blank" href="https://github.com/cunguyendev/parcel-base-app">Parcel base app</a>
-    </p>
+  <footer class="py-8 px-4 text-center text-gray-500 text-sm">
+    <p class="footer-copyright">Copyright © $year</p>
   </footer>
+
+  <script src="./scripts/index.js"></script>
 </body>
-<script src="./scripts/index.js"></script>
 
 </html>
